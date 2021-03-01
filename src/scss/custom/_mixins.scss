@@ -1,0 +1,8 @@
+@mixin roundedIcon($size: 2rem, $font: 1rem) {
+    display: inline-block;
+    width: $size;
+    height: $size;
+    line-height: $size;
+    text-align: center;
+    border-radius: 50%;
+}

@@ -1,0 +1,9 @@
+.icon {
+    @include roundedIcon(3rem);
+    background: #09c;
+    color: #fff;
+    text-decoration: none;
+    &::after {
+        content: '+';
+    }
+}

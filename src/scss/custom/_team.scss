@@ -1,0 +1,45 @@
+.#{$team-block}{
+    display: flex;
+    &__item {
+        
+        flex-basis: 25%;
+        align-items: center;
+        margin: 1rem;
+        padding: 1rem;
+        background: #fff;
+        border-radius: .5rem;
+        box-shadow: $box-shadow-sm;
+
+        &.team__item--horizontal {
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+    }
+
+    &__avatar {
+        @extend %avatar;
+        box-shadow: $box-shadow;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.5rem;
+        text-align: center;
+
+        .#{$team-block}__item--horizontal & {
+            margin-left: .5rem;
+            margin-top: 0;
+            text-align: left;
+        }
+    }
+    
+    &__info-name {
+        color: $gray-800;
+    }
+
+    &__info-position {
+        font-size: .875rem;
+        color: $gray-600;
+    }
+}

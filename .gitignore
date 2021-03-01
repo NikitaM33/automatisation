@@ -1,0 +1,10 @@
+.idea/
+node_modules/
+bower_components/
+yarn.lock
+build/
+
+.DS_Store
+desktop.ini
+Thumbs.db
+package-lock.json
