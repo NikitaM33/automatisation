@@ -1,7 +1,23 @@
-(function () {
-    'use strict'
-
-    document.querySelector('[data-bs-toggle="offcanvas"]').addEventListener('click', function () {
-        document.querySelector('.offcanvas-collapse').classList.toggle('open')
+$(function() {
+    $('.news-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        dots: true,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+                nav:true
+            },
+            600:{
+                items:3,
+                nav:false
+            },
+            1000:{
+                items:5,
+                nav:true,
+                loop:false
+            }
+        }
     });
-})();
+});

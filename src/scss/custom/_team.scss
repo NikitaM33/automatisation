@@ -1,5 +1,11 @@
 .#{$team-block}{
     display: flex;
+
+    
+    &:nth-child(3n) {$tr: 4em;}
+    &:nth-child(5n) {$br: 4em;}
+    &:nth-child(7n) {$bl: 4em;}
+
     &__item {
         
         flex-basis: 25%;
@@ -19,6 +25,56 @@
     &__avatar {
         @extend %avatar;
         box-shadow: $box-shadow;
+        border: 2px solid red;
+        border-radius: $tl $tr $br $bl;
+    }
+
+    &__item:nth-child(2n) &__avatar {
+        border-top-left-radius: 59%;
+        border-top-right-radius: 52%;
+        border-bottom-left-radius: 59%;
+        border-bottom-right-radius: 56%;
+        transform: rotate(-6deg);
+    }
+
+    &__item:nth-child(2n) &__avatar {
+        border-top-left-radius: 51%;
+        border-top-right-radius: 67%;
+        border-bottom-left-radius: 64%;
+        border-bottom-right-radius: 56%;
+        transform: rotate(-4deg);
+    }
+
+    &__item:nth-child(2n+1) &__avatar {
+        border-top-left-radius: 59%;
+        border-top-right-radius: 52%;
+        border-bottom-left-radius: 59%;
+        border-bottom-right-radius: 56%;
+        transform: rotate(-6deg);
+    }
+
+    &__item:nth-child(2n+1) &__avatar {
+        border-top-left-radius: 51%;
+        border-top-right-radius: 67%;
+        border-bottom-left-radius: 64%;
+        border-bottom-right-radius: 56%;
+        transform: rotate(-4deg);
+    }
+
+    &__item:nth-child(3n+2) &__avatar {
+        border-top-left-radius: 59%;
+        border-top-right-radius: 52%;
+        border-bottom-left-radius: 59%;
+        border-bottom-right-radius: 56%;
+        transform: rotate(-6deg);
+    }
+
+    &__item:nth-child(3n+2) &__avatar {
+        border-top-left-radius: 51%;
+        border-top-right-radius: 67%;
+        border-bottom-left-radius: 64%;
+        border-bottom-right-radius: 56%;
+        transform: rotate(-4deg);
     }
 
     &__info {

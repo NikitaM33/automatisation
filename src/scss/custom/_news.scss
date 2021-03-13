@@ -1,3 +1,60 @@
-// .new-carousel {
+.section-news {
+    padding: 5rem 0;
+    background: $vice_city;
+}
 
-// }
+.news {
+    &__item {
+        display: block;
+        padding: 1rem;
+        background: #fff;
+        border-radius: $radius-sm;
+        text-decoration: none;
+
+        &:hover {
+            color: $link-color-hover;
+        }
+    }
+
+    &__img-block {
+        position: relative;
+        margin-bottom: 0.5rem;
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        border-radius: $radius-sm;
+    }
+
+    &__category {
+        position: absolute;
+        bottom: .5rem;
+        left: -0.25rem;
+        padding: .25rem .5rem .125rem;
+        line-height: .5rem;
+        color: #fff;
+        font-size: .5rem;
+        font-weight: 600;
+        letter-spacing: 0.025em;
+        text-transform: uppercase;
+        box-shadow: $shadow-xs;
+        border-radius: $radius-xs;
+    }
+
+    &__date {
+        margin-bottom: 0.5rem;
+        color: $gray-500;
+        font-size: .75rem;
+    }
+
+    &__title {
+        font-size: .875rem;
+        line-height: 1.5rem;
+        color: $text-main;
+    }
+}
+
+.owl-carousel {
+    display: block;
+}

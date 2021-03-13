@@ -4,6 +4,21 @@ $avatar-size: 3rem;
 $team-block: "team";
 
 $primary: #09c;
+$vice_city: linear-gradient(90deg, #ff00cc, #333399);
+$text-main: #32325d;
+$link-color: #14142e;
+$link-color-hover: lighten(#14142e, 40%);
+
+$shodow-color: rgb(35, 38, 45);
+
+$tl: 0;
+$tr: 0;
+$bl: 0;
+$br: 0;
+
+$shadow-xs: 0 .125rem .25rem rgba($shodow-color, .09);
+$shadow-sm: 0 .3125rem .75rem rgba($shodow-color, .09);
+$shadow-md: 0 .5rem 1.25rem rgba($shodow-color, .125);
 
 $news-categories: (
     blue:    #0d6efd,
@@ -19,8 +34,12 @@ $news-categories: (
 );
 
 @each $name, $value in $news-categories {
-    .category--#{name} {
+    .category--#{$name} {
         background: $value;
     }
 }
-// Остановился на 3_1 23:43
+
+$radius-xs: .125rem; // 2px
+$radius-sm: .25rem; //4px
+$radius-md: .5rem; // 8px
+$radius-lg: 1rem; // 16px

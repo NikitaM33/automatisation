@@ -73,6 +73,16 @@ gulp.task('clean', function(done) {
     rimraf(path.clear, done);
 });
 
+gulp.task('html:dev', function(done) {
+    gulp.src(path.src.html)
+        .pipe(htmlmin({
+            collapseWhitespace: true
+        }))
+        .pipe(gulp.dest(path.build.html))
+
+    done();
+});
+
 gulp.task('dev:html', function(done) {
     gulp.src(path.src.html)
         .pipe(plumber())
@@ -154,12 +164,12 @@ gulp.task('localhost', function(done) {
 });
 
 gulp.task('watch', function(done) {
-    gulp.watch(path.watch.html, gulp.series('dev:html'));
-    gulp.watch(path.watch.scss, gulp.series('dev:scss'));
-    gulp.watch(path.watch.js, gulp.series('dev:js'));
-    gulp.watch(path.watch.img, gulp.series('mv:img'));
-    gulp.watch(path.watch.fonts, gulp.series('mv:fonts'));
+        gulp.watch(path.watch.html, gulp.series('dev:html'));
+        gulp.watch(path.watch.scss, gulp.series('dev:scss'));
+        gulp.watch(path.watch.js, gulp.series('dev:js'));
+        gulp.watch(path.watch.img, gulp.series('mv:img'));
+        gulp.watch(path.watch.fonts, gulp.series('mv:fonts'));
     done();
-}); // 2_2 закончил
+});
 
 gulp.task('default', gulp.series('clean', gulp.parallel('dev:html', 'dev:scss', 'dev:js', 'mv:img'), 'localhost', 'watch'));
